@@ -2,17 +2,13 @@ const Discord = require("discord.js");
 
 require("dotenv").config();
 
-welcomeIdChannel = "990774765641936916/990774765641936922"
-
-
 const client = new Discord.Client({
     intents: [
         "GUILDS",
         "GUILD_MESSAGES",
-        "GUILD_MEMBERS"
+        "MESSAGE_CREATE"
     ]
 });
-
 
 client.on("ready", () => {
     console.log(`Logged in as ${client.user.tag}`)
@@ -20,9 +16,11 @@ client.on("ready", () => {
 
 
 client.on("messageCreate", (Message) => {
-    if(Message.content == "Howdy"){
+    if(Message.content.toLowerCase() == "howdy"){
         Message.reply(`Howdy ${Message.author}`)
     }
 })
+
+welcomeIdChannel = "990774765641936916/990774765641936922"
 
 client.login(process.env.TOKEN)
