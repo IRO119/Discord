@@ -5,8 +5,7 @@ require("dotenv").config();
 const client = new Discord.Client({
     intents: [
         "GUILDS",
-        "GUILD_MESSAGES",
-        "MESSAGE_CREATE"
+        "GUILD_MESSAGES"
     ]
 });
 
@@ -17,7 +16,7 @@ client.on("ready", () => {
 
 client.on("messageCreate", (Message) => {
     if(Message.content.toLowerCase() == "howdy"){
-        Message.reply(`Howdy ${Message.author}`)
+        Message.reply(`Suck my peen ${Message.author}`)
     }
 })
 
