@@ -15,8 +15,8 @@ client.on("ready", () => {
 
 
 client.on("messageCreate", (Message) => {
-    if(Message.content.toLowerCase() == "howdy"){
-        Message.reply(`Suck my peen ${Message.author}`)
+    if(Message.content.toLowerCase() == "Help I am getting eaten by an aligator"){
+        Message.reply(`Oh man that sucks, too bad ${Message.author}`)
     }
 })
 
