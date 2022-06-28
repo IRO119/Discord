@@ -51,7 +51,7 @@ const generateImage = async (member) => {
 
     ctx.fillStyle = "white";
     ctx.font = "30px Times New Roman";
-    ctx.fillText(username, dim.width / 2, dim.height - dim.margin + 14);
+    ctx.fillText(username + discrm, dim.width / 2, dim.height - dim.margin + 14);
 
     ctx.font = "20px Times New Roman";
     ctx.fillText("to the server", dim.width / 2, dim.height - dim.margin + 14);

@@ -23,7 +23,7 @@ client.on("messageCreate", (Message) => {
     }
 })
 
-const welcomeIdChannel = "990774765641936916/990774765641936922"
+const welcomeIdChannel = "990774765641936916/990774765641936918"
 
 client.on("guildMemberAdd", async (member) => {
     const img = await generateImage(member)
@@ -31,6 +31,6 @@ client.on("guildMemberAdd", async (member) => {
         content: `<@${member.id}> Welcome to the server!`,
         files: [img]
     })
-})
+});
 
 client.login(process.env.TOKEN)
