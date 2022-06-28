@@ -32,4 +32,5 @@ client.on("guildMemberAdd", async (member) => {
         files: [img]
     })
 })
+
 client.login(process.env.TOKEN)
