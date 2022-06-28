@@ -23,7 +23,7 @@ client.on("messageCreate", (Message) => {
     }
 })
 
-const welcomeIdChannel = "990774765641936916/990774765641936918"
+const welcomeIdChannel = "990774765641936916/990774765641936922"
 
 client.on("guildMemberAdd", async (member) => {
     const img = await generateImage(member)

@@ -2,7 +2,7 @@ const Canvas = require("canvas");
 
 const Discord = require("discord.js");
 
-const background = "./welcomeImg.webp"
+const background = "./welcomeImg.png"
 
 const dim = {
     width: 626,
@@ -11,7 +11,7 @@ const dim = {
 }
 
 const av = {
-    size: 100,
+    size: 256,
     x: 313,
     y: 209
 }
@@ -28,8 +28,8 @@ const generateImage = async (member) => {
     const backimg = await Canvas.loadImage(background);
     ctx.drawImage(backimg, 0, 0)
 
-    ctx.fillStyle = "rbga(0, 0, 0, 0, 0.8)"
-    ctx.fillRect(dim.margin, dim.margin, dim.margin - 2 * dim.margin, dim.height - 2 * dim.margin)
+    ctx.fillStyle = "rgba(0, 0, 0, 0, 0.8)"
+    ctx.fillRect(dim.margin, dim.margin, dim.width - 2 * dim.margin, dim.height - 2 * dim.margin)
 
     const avimg = await Canvas.loadImage(avatarURL);
     ctx.save();
