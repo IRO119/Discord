@@ -4,6 +4,10 @@ require("dotenv").config();
 
 const generateImage = require("./welcomeImg")
 
+const rules = require("./rules")
+
+const ruleChannelId = "990774765641936920"
+
 const client = new Discord.Client({
     intents: [
         "GUILDS",
@@ -14,6 +18,7 @@ const client = new Discord.Client({
 
 client.on("ready", () => {
     console.log(`Logged in as ${client.user.tag}`)
+    //client.channels.cache.get(ruleChannelId).send(rules)
 });
 
 
@@ -23,7 +28,7 @@ client.on("messageCreate", (Message) => {
     }
 })
 
-const welcomeIdChannel = "990774765641936916/990774765641936918"
+const welcomeIdChannel = "990774765641936918"
 
 client.on("guildMemberAdd", async (member) => {
     const img = await generateImage(member)

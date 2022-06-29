@@ -12,8 +12,8 @@ const dim = {
 
 const av = {
     size: 256,
-    x: 313,
-    y: 209
+    x: 183,
+    y: 80
 }
 
 const generateImage = async (member) => {
@@ -43,18 +43,18 @@ const generateImage = async (member) => {
 
     ctx.restore();
 
-    ctx.fillStyle = "black";
+    ctx.fillStyle = "white";
     ctx.textAlign = "center";
 
     ctx.font = "50px Times New Roman"
-    ctx.fillText("Howdy", dim.width / 2, dim.margin - 3);
+    ctx.fillText("Howdy", dim.width / 2, dim.margin + 10);
 
     ctx.fillStyle = "white";
     ctx.font = "30px Times New Roman";
-    ctx.fillText(username + discrm, dim.width / 2, dim.height - dim.margin + 14);
+    ctx.fillText(username, dim.width / 2, dim.height - dim.margin + 7);
 
     ctx.font = "20px Times New Roman";
-    ctx.fillText("to the server", dim.width / 2, dim.height - dim.margin + 14);
+    ctx.fillText("to the server", dim.width / 2, dim.height - dim.margin + 30);
     
     const attachment = new Discord.MessageAttachment(canvas.toBuffer(), "welcome.png")
 
